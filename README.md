@@ -1,7 +1,6 @@
 ```markdown
 # The Weather Forecasting App
 
-![Application screenshot](./public/screenshot.png)
 
 With the Weather Forecasting app, users can search for weather information by city name and observe the weather for the next 5-6 days with a 3-hour interval.
 
