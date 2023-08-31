@@ -12,16 +12,16 @@ export function getWeekDays() {
 
 export function getDayMonthFromDate() {
   const month = MONTHS[date.getMonth()].slice(0, 3);
-  const day = date.getUTCDate();
+  const day = date.getDate();
 
   return day + ' ' + month;
 }
 
 export function transformDateFormat() {
-  const month = date.toLocaleString('en-US', { month: '2-digit' });
-  const day = date.toLocaleString('en-US', { day: '2-digit' });
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
   const year = date.getFullYear();
-  const time = date.toLocaleString('en-US', {
+  const time = date.toLocaleString('en-IN', {
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
@@ -32,27 +32,27 @@ export function transformDateFormat() {
   return newFormatDate;
 }
 
-export function getUTCDatetime() {
-  const utcTime = date.toLocaleString('en-US', {
+export function getISTDatetime() {
+  const istTime = date.toLocaleString('en-IN', {
     hour: '2-digit',
     minute: '2-digit',
     hourCycle: 'h23',
-    timeZone: 'UTC',
+    timeZone: 'Asia/Kolkata',
   });
 
   const isoDateString = new Date().toISOString();
-  const utcDate = isoDateString.split('T')[0].concat(' ', utcTime);
-  return utcDate;
+  const istDate = isoDateString.split('T')[0].concat(' ', istTime);
+  return istDate;
 }
 
-export function getUTCTime() {
-  const utcTime = date.toLocaleString('en-US', {
+export function getISTTime() {
+  const istTime = date.toLocaleString('en-IN', {
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
     hourCycle: 'h23',
-    timeZone: 'UTC',
+    timeZone: 'Asia/Kolkata',
   });
 
-  return utcTime;
+  return istTime;
 }
