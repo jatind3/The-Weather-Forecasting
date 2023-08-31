@@ -6,6 +6,11 @@ With the Weather Forecasting app, users can search for weather information by ci
 
 The app is developed using React.js and Material-UI.
 
+## Live Demo
+
+Check out the live demo:
+💻 [Live Demo](https://the-weather-forecasting.vercel.app/)
+
 ## ✨ Getting Started
 
 To get started:
